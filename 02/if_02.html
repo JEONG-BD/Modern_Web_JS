@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        var input = prompt("숫자를 입력하세요");
+        var number = Number(input);
+        
+        if(!isNaN(number)){
+            if(input > 0 ){
+                alert("양수");
+            }else if(input == 0) {
+                alert("0");
+            }else {
+                alert("음수");
+            }
+        }
+        else {
+            alert("Error");
+        }
+
+
+        var input = prompt("숫자를 입력하세요");
+        var number = Number(input);
+        
+        if(!isNaN(number)){
+            if(input % 2 == 0 ){
+                alert("짝수");
+            }else {
+                alert("홀수");
+            }
+        }
+        else {
+            alert("Error");
+        }
+        */ 
+
+        var koreanScore = Number(prompt("국어점수")); 
+        var mathScore = Number(prompt("수학점수")); 
+        var englishScore = Number(prompt("영어점수")); 
+        var socialScore = Number(prompt("사회점수")); 
+        
+        if ((!isNaN(koreanScore)) && (!isNaN(mathScore)) && (!isNaN(englishScore)) && (!isNaN(socialScore))){
+            var totalScore = koreanScore + mathScore + englishScore + socialScore ; 
+            var averageScore= totalScore / 4 ; 
+            alert(`totalScore : ${totalScore} \n avgScore : ${averageScore}`);
+
+            if (averageScore >= 90) {
+                alert("수");
+            } else if (averageScore >= 80) {
+                alert("우");
+            } else if (averageScore >= 70) {
+                alert("미");
+            } else if (averageScore >= 60) {
+                alert("양");
+            } else {
+                alert("가");
+            }
+
+        }else {
+            alert("Error");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
