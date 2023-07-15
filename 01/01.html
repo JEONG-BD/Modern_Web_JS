@@ -5,9 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        alert("Hello JavaScript")
-        alert("This is 'string'")
-        alert('This is \'string\'')
+        // 1.string 
+        /*
+        alert("Hello JavaScript");
+        alert("This is 'string'");
+        alert('This is \'string\'');
+        */
+        
+        // 2.number  
+        /*
+        alert(52.273);   
+        alert(10 % 7);
+        alert(5+3*2)
+        */
+
+        // 3.bool 
+        /*
+        alert(52 > 273);
+        alert(52 < 273);
+        
+        if(273 < 52) {
+            alert("273은 52보다 작다");
+        }
+        if(273 > 52) {
+            alert("273은 52보다 크다"); 
+        }
+        
+        alert(!true);
+        alert(!false);
+        
+        alert(30> 20>10)
+        */ 
+
+        // 4.variable 
+        /*
+        var pi;
+        var radius;
+        pi = 3.141592;
+        radius = 10;
+
+        
+        var radius, pi;
+        pi = 3.141592;
+        radius = 10;
+        
+        var radius = 10, pi = 3.141592 
+        alert(2 * pi * radius);
+        */ 
+        // 5.assignment operator 
+        /*
+        += 기존 변수의 값에 값을 더한다 
+        -= 기존 변수의 값에 값을 뺀다 
+        *= 기존 변수의 값에 값을 곱한다 
+        /= 기존 변수의 값에 값을 나눈다
+        %= 기존 변수의 값에 나머지를 구한다 
+        
+
+        var value = 10; 
+        value += 10; 
+        alert(value);
+
+        window.onload = function(){
+            var list = "";
+
+            list += "<ul>";
+            list += "  <li>Hello</li>"; 
+            list += "  <li>JavaScript</li>";
+            list += "</ul>";
+
+            document.body.innerHTML = list ; 
+        }
+        */
+
+        // 6.Increment/Decrement operators 
+        /* 
+        변수 ++ 기존의 변수 값에 1을 더한다(후위)
+        ++ 변수 기존의 변수 값에 1을 더한다(전위)
+        변수 -- 기존의 변수 값에 1을 뺀다(후위)
+        -- 변수 기종의 변수 값에 1을 뺀다(전위) 
+        
+        var number = 10; 
+
+        number++; 
+
+        alert(number++);
+        alert(number++);
+        alert(number++);
+        
+     
+        var number = 10; 
+
+        alert(number+= 1);
+        alert(number+= 1);
+        alert(number+= 1);
+        alert(number+= 1);
+        
+
+        var number = 10; 
+        alert(number++);
+        alert(++number);
+        */  
+
+        // 7. 변수의 특성 
+        var cup = "Coffee";
+        cup = "Green Tea";
+        cup = "Water";
+        alert("Drink " + cup + "...! "); 
+
+        var favoritefood = "김치찌개";
+        var favoritefood = "라면";
+        var favoritefood = "냉면"; 
+
+        alert(favoritefood)
 
     </script>
 </head>
