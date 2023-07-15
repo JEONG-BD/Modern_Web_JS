@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //1. let 키워드와 const 키워드 
+        /*
+        var variableA = 52; 
+        let variableB = 273; 
+        const constantC = 103; 
+
+        alert(variableA + typeof(variableA));
+        alert(variableB + typeof(variableB));
+        alert(constantC + typeof(constantC));
+        
+        //변수와 상수의 구분 
+        /*
+        변수(變數)는 "변할 수 있는 값"을 의미  상수(常數)는 "변하지 않는 값"을 의미
+        따라서 변수는 값을 변경할 수 있고 상수는 변경할 수 없다 
+        상수는 선언한 이후에 값을 변경할 수 없으므로, 선언할 때 반드시 값을 함께 넣어줘야 한다 
+        
+        const constantC = 273;
+        // constantC = 20; Error  
+        alert(constantC);
+        
+        
+        // var 키워드로 선언한 변수와 let 키워드로 선언한 변수의 차이 
+        특정 변수를 사용할 수 있는 유효 범위를 스코프라고 한다. 조건문, 반복문, 대괄호 등으로 만들어진다. 
+        // 전역 스코프
+        {
+            // 스코프 A 
+            {
+                // 스코프 B
+            }
+        } 
+
+        {   
+            // 스코프 A 
+            var variable = 273 ;
+        }
+
+        {
+            // 스코프 B 
+            alert(variable);
+        }
+
+        // 전역 스코프 
+        alert(variable);
+
+
+
+        {
+            let variableA = 84;
+            alert(variableA);
+        }
+        {
+            alert(variableA);
+        }
+        alert(variableA);
+        */ 
+
+        for(var i =0; i < 3; i++ ){
+            setTimeout(()=> {
+                
+                alert(i);
+
+            }, 1000 * i);
+        }
+
+        for(var i=0; i<3; i++){
+            ((i)=>{
+                setTimeout(() => {
+                    alert(i);        
+                }, 1000 * i);
+            })(i);
+        }
+
+        for(let i=0; i<3; i++){
+            setTimeout(()=> {
+                alert(i);
+            }, 1000 * i);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
