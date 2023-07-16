@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //parameter & return value 
+        /*
+        function funcA(x){
+            alert(x * x ); 
+        }
+
+        funcA(3);
+
+        var array1 = Array();           // 빈 배열 생성 
+        var array2 = Array(10);         // 매개변수의 값만큼의 크기를 가지는 배열 생성 
+        var array3 = Array(1, 2, 3, 4); // 매개변수를 배열로 생성 
+
+        alert(array1 + "\n" + array2 + "\n" + array3);
+        */ 
+ 
+        //varidic arguments
+        /*
+        function sumAll(){
+            alert(typeof(arguments)+ ":"+ arguments.length);
+        }
+        sumAll(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+        function sumAll(){
+            var output = 0; 
+            for (var i = 0; i < arguments.length; i++){
+                output += arguments[i];
+
+            }
+            return output;
+        }
+        
+        var result = sumAll(1, 2, 3, 4, 5, 6, 7, 8, 9);
+        alert(result);
+        
+
+        //return value; 
+        
+        function f(x){
+            return x * x; 
+        }
+
+        var reValue = f(3);
+        alert(reValue);
+
+        function returnFuncA(){
+            alert("문장A");
+            return;
+            alert("문장B"); 
+        }
+
+        returnFuncA();
+
+        function returnFuncB(){
+            return ; 
+            alert("문장 A");
+            alert("문장 B"); 
+        }
+
+        var result = returnFuncB();
+        alert(typeof(result) + ":" + result);
+        
+
+        // inner function 
+
+        function pythagorasA(width, height){
+            return Math.sqrt(width * width + height * height);
+        }
+        
+        function square(x){
+            return x * x ; 
+        }
+
+        function pythagorasB(width, height){
+            return Math.sqrt(square(width) + square(height)); 
+        }
+
+        outputA = pythagorasA(3, 4); 
+        outputB = pythagorasB(3, 4); 
+
+        alert(outputA);
+        alert(outputB);
+            
+
+        function square(x){
+            return x * x; 
+        }
+        
+        function pythagoras(width, height){
+            return Math.sqrt(square(width) + square(height));
+        }
+
+        alert(pythagoras(3, 4)); 
+
+        function square(width, height, hypotenuse){
+            if (width * width + height *height == hypotenuse * hypotenuse){
+                return true;
+            }
+            else {
+                return false; 
+            }
+        }
+
+        */ 
+        function pythagoras(width, height){
+            function square(x){
+                return x * x ; 
+            }
+
+            return  Math.sqrt(square(width)+ square(height));
+        }
+
+        alert(pythagoras(10, 10));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
