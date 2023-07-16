@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        // while 반복문 
+        
+        var value = 0;
+        
+        while(value < 5){
+            alert(value); 
+            value+=1;
+        }
+        
+        var startTime = new Date().getTime(); 
+        var value = 0; 
+        while(new Date().getTime()< startTime + 1000){
+            value ++ ;
+        }
+        alert(value);
+        
+
+        // do while 반복문 
+        var value = 0 ; 
+        do {
+            alert(value + "번째 반복문"); 
+            value ++ ; 
+        }while(value < 5);
+ 
+        //for 반복문 
+
+        for(var i =0; i<10; i++){
+            alert(i);
+        }
+        
+        var array = ["apple", "banana", "melon", "potato"];
+
+        for(var i = 0; i < array.length; i++){
+            alert(array[i]);
+        }
+        
+        var array = ["apple", "banana", "melon", "potato"];
+
+        for(var i= array.length-1; i>=0; i-- ){
+            alert(array[i]);
+        }
+         
+        
+        var startTime = new Date().getTime(); 
+
+        for(var cps = 0; new Date().getTime() < startTime + 1000; cps++){
+            alert("초당 연산 횟수" + cps);
+        }
+         
+
+        // for in 반복문 
+
+        var array = ["apple", "banana", "pepper", "potato"];
+        for(var i in array){
+            alert(array[i]);
+        }
+         
+
+        var output = ""; 
+
+        for(var i=0; i<6; i++){
+            for(var j=0; j<i; j++){
+                output+= "*";
+            }
+            output += "\n";
+        }
+
+        alert(output);
+        
+
+        //break 키워드 
+        for(var i=0; true; i++){
+            alert(i+"th");
+
+            if(!confirm("continue")){
+                break; 
+            }
+        }
+        alert("Exit");
+        
+
+        //continue 키워드 
+        for(var i=0; i<5; i++){
+            continue;
+            alert(i);
+        }
+
+        var output = 0;
+
+        for(var i=1; i<=10; i++){
+            if(i % 2 == 0){
+                continue;
+            }
+            output += i;
+        }
+        alert(output);
+        
+
+
+        var array = [1, 2, 3, 4]; 
+        for (var i in array ){
+            alert(i+":"+array[i]);
+        }
+
+        for (const element of [1, 2, 3, 4]){
+            alert(`요소는 ${element} 입니다`);
+        }
+        */
+
+        var array = ["apple", "banana", "peach", "potato"]; 
+        let i = 0; 
+        for (const element of array){
+            alert(`${i} ${element}`);
+            i++;
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
