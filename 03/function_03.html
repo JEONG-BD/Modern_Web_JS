@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //callback function 
+        //javascript에서는 함수도 하나의 자료형이므로 매개변수로 전달이 가능하다 
+        //이렇게 매개변수로 전달하는 함수를 Callback function 이라고 한다. 
+
+        /*
+        function callTenTimes(callback){
+            for(var i =0; i<10; i++){
+                callback();
+            }
+        }
+
+        var callback = function() {
+            alert("Call");
+        }
+
+        callTenTimes(callback);
+        
+
+        //return function 
+
+        function returnFunction(){
+            return function(){
+                
+                alert("Hello function!");
+            };
+        }
+
+        returnFunction()();
+        */ 
+        
+        // closure 
+        /*
+        function test(name){
+            var output = "Hello" + name + "..!";
+        }
+
+        alert(output);
+        */ 
+
+        function test(name){
+            var output = "Hello" + name + "..!"; 
+            return function(){
+                alert(output);
+            };
+        }
+
+        test("JavaScript")();
+
+        function test(name){
+            var output = "Hello " + name + "..!"; 
+            return function(){
+                alert(output);
+            }
+        }
+
+        var test_1 = test("Web");
+        var test_2 = test("JavaScript"); 
+
+        test_1();
+        test_2();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
