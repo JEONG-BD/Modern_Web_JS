@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //기본 매개변수 
+        /*
+        매개변수를 입력하지 않았을 때 매개변수를 강제로 초기화하는 것을 기본 매개변수라고 한다 
+
+        function test1(a, b, c){
+            if (!b) {
+                b = 52;
+            }
+            if (!c){
+                c = 273;
+            }
+            alert(a + ":" + b + ":" + c)
+
+        }
+
+        function test2(a, b, c){
+            b = b || 52; 
+            c = c || 273;
+            
+            alert(a + ":" + b + ":" + c)
+
+        }
+        test1(1, 2);
+        test2(2, 3); 
+
+        function test3(a, b=52, c=273){
+            alert(a + ":" + b + ":" + c)
+        }
+        test3(1, 2);
+        
+        function test1(){
+            alert(arguments[0]);
+            alert(arguments[1]);
+            alert(arguments[2]);
+
+        }
+
+        test1(1, 2, 3, 4, 5);
+
+        function test2(...numbers){
+            alert(numbers[0]);
+            alert(numbers[1]);
+            alert(numbers[2]);
+        }
+        
+        test2(1, 3, 5);
+        
+        function test3(a, b, ...numbers){
+            alert(a);
+            alert(b);
+            alert(numbers);
+        }
+
+        test3(11, 12, 13, 14, 15, 16);
+        */
+        function test4(a, b, c, d){
+            alert(a+" : "+b +" : "+ c +" : "+ d);
+        }
+        var array = [1, 2, 3, 4]
+        test4.apply(null, array); 
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
