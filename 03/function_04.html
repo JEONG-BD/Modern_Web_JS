@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Built in function
+
+        //1. Timer function 
+        /*
+        setTimeout(function(){
+
+            alert("3초가 지났습니다");
+        
+        }, 3000);
+         
+
+        var intervalID = setInterval(function() {
+            alert("<p>" +new Date() + "</p>");
+        }, 1000);
+
+        setTimeout(function (){
+            clearInterval(intervalID);
+        }, 1000);
+        */
+
+        //2. Encoding & Decoding function 
+        /*
+        Encoding은 문자를 컴퓨터에 저장하거나 통신에 사용할 목적으로 부호화 하는 것 
+        Web에서는 통신할 때 한글 같은 Unicode 문자가 오작동을 일을킬 수 있으므로 Encoding 해야 한다 
+        문자 부호화하는 것이 Encoding 반대로 문자를 원래대로 되돌리는 것은 Decoding 
+        
+
+        var URI = "http://hanbit.co.kr?test=한글입니다"; 
+
+        var output = ""; 
+        output += "★escape()\n";
+        output += escape(URI) + "\n\n"; 
+        output += "★encodeURI()\n";
+        output += encodeURI(URI) + "\n\n"; 
+        output += "★encodeURIComponent()\n";
+        output += encodeURIComponent(URI) + "\n\n"; 
+
+        alert(output);
+        */ 
+
+        //3. eval 
+        /*
+        
+        var willEval = "";
+        willEval += "var number = 10;" ;
+        willEval += "alert(number);"; 
+
+        eval(willEval);
+        */
+
+        //4. 숫자 확인 함수 
+        /*
+        isFinite() number 값이 무한한 값인지 확인한다 
+        isNaN()    number 값이 NaN인지 확인한다 
+        
+        var number = 1 / 0 ; 
+        alert(number);
+        alert(number + ":" + isFinite(number));
+        var value = -10 / 0 ; 
+        if(value == Infinity){
+            alert("Infinity");
+        }
+        else {
+            alert("Not Infinity");
+        }
+         
+
+        if (NaN == NaN){
+            alert("NaN == NaN");
+        }else {
+            alert("NaN != NaN");
+        }
+        // NaN은 자기 자신과 비교가 불가능하다 
+        // 따라서 NaN을 확인 할 때에는 반드시 isNaN() 함수를 사용해야 한다 
+
+        if(isNaN(NaN)){
+            alert("NaN == NaN");
+        }
+        else {
+            alert("NaN != NaN");
+        }
+        */
+
+        // 숫자 변환 함수 
+        //parseInt(string) string을 정수로 바꾸어 준다 
+        //parseFloat(string) string을 유리수로 바꾸어 준다
+        /*
+        var won = "1000원"; 
+        var dollar = "1.5$"; 
+        alert(Number(won) + Number(dollar));
+        
+        //parseInt() 함수와 parseFloat() 함수는 숫자로 변환할 수 있는 모든 부분까지는 모두 숫자로 변환한다.  
+        var won = "1000원";
+        var dollar = "1.5$"; 
+        alert(parseInt(won) + ":" + parseInt(dollar));
+        alert(parseFloat(won) + ":" + parseFloat(dollar));
+        */
+        /*
+        parseInt()와 parseFloat() 함수를 사용할 때 주의해야 할 사항 
+        parseInt("0x273") => 627 
+        parseInt("273")   => 273 
+        parseInt("0273")  => 187 
+
+        JavaScript에서는 0으로 시작하거나 0x로 시작하면 10진수가 아니라 16진수로 생각하고 변환한다 
+        parseInt()함수의 두번째 매개변수에 진법을 입력하면 해당 진법의 수로 인식 
+        parseInt("FF", 16) => 255 
+        parseInt("52", 10) => 52 
+        parseInt("11", 8)  => 9 
+        parseInt("10", 2)  => 2 
+
+        
+        //JavaSrcipt 실행 순서 
+
+        alert("A"); 
+        setTimeout(function(){
+            alert("B");
+        }, 0);
+
+        alert("C");
+
+
+        for(var i=0; i<3; i++){
+            setTimeout(function(){
+                alert(i);
+            },0);
+        }
+        */ 
+
+        for(var i=0; i<3; i++){
+            (function(closed_i){
+                setTimeout(function(){
+                    alert(closed_i);
+                }, 0)
+            })(i);
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
