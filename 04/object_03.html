@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        function test(options){
+            options.valueA = options.valueA || 10;
+            options.valueB = options.valueB || 20; 
+            options.valueC = options.valueC || 30; 
+            
+            alert(options.valueA + ":" + options.valueB + ":" + options.valueC);
+        }
+
+
+        test({valueA:52, valueC:273});
+        //값 복사와 참조 복사 
+        //깊은 복사 값복사 
+        var originalValue = 10; 
+        var newValue =  originalValue; 
+        
+        originalValue = 20 ;
+        
+        alert(originalValue);
+        alert(newValue);
+        
+
+        //얕은 복사 참조 복사 
+        var originalArray = [1, 2, 3, 4]; 
+        var newArray = originalArray; 
+
+        originalArray[0] = 0 ; 
+
+        alert(originalArray);
+        alert(newArray);
+        */     
+        /*
+        JavaScript는 기본 자료형(Number, String, Bool)을 복사할 때 값을 완전히 복사해 버린다. 
+
+        
+
+        //객체의 깊은 복사 
+
+        function clone(obj){
+            var output = {};
+            for (var i in obj){
+                output[i] = obj[i];
+            }
+            return output; 
+        }
+
+        var original = {a:10, b :20}; 
+        var referenced = original; 
+        var cloned = clone(original); 
+
+        original.a = 20; 
+
+        alert(JSON.stringify(referenced, null, 2)); 
+        alert(JSON, stringify(cloned, null, 2)); 
+
+        //전개연산자를 사용할 배열 
+        
+        var originalArray = [1, 2, 3, 4, 5]; 
+
+        var newArray = []; 
+        
+        for(var i =0; i< originalArray.length; i++){
+            newArray[i] = originalArray[i]; 
+        }
+        
+        alert(originalArray);
+        alert(newArray);
+        
+        const originalArray = [1, 2, 3, 4, 5];
+        const newArray = [...originalArray]; 
+        
+        originalArray[0] = 52 ; 
+        originalArray[1] = 273; 
+        alert(originalArray);
+        alert(newArray);
+        */
+
+        const arrayA = [1, 2, 3, 4, 5]; 
+        const arrayB = [52, 273, 103, 32, 57];
+
+        const arrayC = [...arrayA, ...arrayB];
+        alert(arrayC);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
