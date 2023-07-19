@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //객체의 속성 추가 
+        /*
+        var student = {};
+
+        student.name = "Mike"; 
+        student.hobby = "Soccer";
+        student.age = 18; 
+        student.job = "Developer";
+        student.country = "America"; 
+        
+        
+        student.toString = function(){
+            var output = "";
+
+            for (var key in this){
+                if (key != "toString"){
+                    output += key + "\t" + this[key] + "\n";
+                }
+            }
+
+            return output; 
+        };
+
+        alert(student.toString());
+        */
+        // 객체의 속성 제거
+        /*
+        var student = {};
+        var output = "";
+        student.name = "Mike"; 
+        student.hobby = "Soccer";
+        student.age = 18; 
+        student.job = "Developer";
+        student.country = "America"; 
+
+        student.toString = function(){
+            for(var key in this){
+                if (key != "toString"){
+                    output += key +"\t" + this[key] + "\n";
+
+                }
+            }
+            return output;
+        };
+
+        //alert(student.toString());
+
+        delete(student.job);
+
+        alert(student.toString());
+        var student0 = {name:"Mike", korean:87, math:98, english:88, science:40};
+        var student1 = {name:"John", korean:87, math:98, english:88, science:40};
+        var student2 = {name:"Kate", korean:87, math:98, english:88, science:40};
+        var student3 = {name:"Picky", korean:87, math:98, english:88, science:40};
+        var student4 = {name:"Cherry", korean:87, math:98, english:88, science:40};
+        var student5 = {name:"Kute", korean:87, math:98, english:88, science:40};
+        var student6 = {name:"Smith", korean:87, math:98, english:88, science:40};
+        
+        
+        var students = []; 
+        
+        students.push({name:"Mike", korean:87, math:98, english:88, science:40});
+        students.push({name:"John", korean:87, math:98, english:88, science:40});
+        students.push({name:"Kate", korean:87, math:98, english:88, science:40});
+        students.push({name:"Picky", korean:87, math:98, english:88, science:40});
+        students.push({name:"Cherry", korean:87, math:98, english:88, science:40});
+        students.push({name:"Kute", korean:87, math:98, english:88, science:40});
+        students.push({name:"Smith", korean:87, math:98, english:88, science:40});
+
+        for (var i in students){
+            students[i].getSum = function(){
+              return this.korean + this.math + this.english + this.science;  
+            };
+
+            students[i].getAverage = function(){
+                return this.getSum() / 4; 
+            }
+            ;
+            
+        }
+        var output = "이름\t총점\t평균";
+
+        for(var i in students){
+            with(students[i]){
+                output += "name " + "\t" + getSum() + "\t" + getAverage() +"\n";
+            }
+        }
+        alert(output);
+        */
+
+        // 함수를 이용한 객체 생성 
+        var students = []; 
+        /*    
+        students.push({
+            name : "Mike",
+            korean : 90, 
+            math : 80,
+            english : 100, 
+            science : 60,
+            job : "developer" 
+        });
+        
+        students.push({
+            name : "John",
+            korean : 90, 
+            math : 80,
+            english : 100, 
+            science : 60,
+            job : "coder", 
+            hobby : "Cook" 
+        });
+
+        students.push({
+            name : "Kate",
+            korean : 90, 
+            math : 80,
+            english : 100, 
+            science : 60,
+            job : "programmer", 
+            hobby : "Book" 
+        });
+        */
+
+        function makeStudents(p_name, p_kor, p_eng, p_math, p_science){
+            var willReturn = {
+                name : p_name,
+                korean : p_kor,
+                math : p_math,
+                english : p_eng, 
+                science : p_science,
+
+
+                getSum : function(){
+                    return this.korean + this.math + this.english + this.science;
+                },
+
+                getAverage : function(){
+                    return this.getSum() / 4 ; 
+
+                },
+                toString : function(){
+                    return this.name +"\t"+ this.getSum() + "\t" + this.getAverage();
+                }
+
+            };
+
+
+
+
+
+            return willReturn;
+        
+        
+        }
+        
+
+        students.push(makeStudents("Mike", 44, 33, 22, 11));
+        students.push(makeStudents("John", 44, 33, 22, 11));
+
+        var output = ""
+
+        for(var i in students){
+            output += students[i].toString() + "\n"
+        }
+
+        alert(output);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
